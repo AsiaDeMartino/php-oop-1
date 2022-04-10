@@ -26,8 +26,20 @@ class Movie {
 
     }
 
+    public function FilmInfo() {
+        return
+        "<h1> $this->titolo </h1>" .
+        "<span> GENERE: $this->genere  </span>" . "<br>" . 
+        "<span> ANNO DI USCITA: $this->annoUscita </span>" . "<br>" . 
+        "<span> ATTORI PRINCIPALI: $this->attoriPrincipali </span>" . "<br>" . 
+        "<span> VOTO: $this->voto </span>" . "<br>" . 
+        "<h5>  TRAMA: </h5>" .
+        "<p> $this->trama </p>";
+    }
 }
 
+
+$harryPotter = new Movie ("Harry Potter e La Pietra Filosofale", "Fantasy, Avventura" , 2001 , "Harry Potter è un ragazzo orfano in seguito all'uccisione dei suoi genitori da parte di Lord Voldemort. Ha un viso sottile, occhi verde intenso e una cicatrice sulla fronte a forma di saetta. A un anno viene affidato agli zii Dursley, che però lo trattano male.", "Daniel Radcliffe, Rupert Grint, Emma Watson", 10);
 
 ?>
 
@@ -40,6 +52,8 @@ class Movie {
     <title>Document</title>
 </head>
 <body>
-   
+    <div>
+        <?php echo $harryPotter->FilmInfo() ?>
+    </div>
 </body>
 </html>
